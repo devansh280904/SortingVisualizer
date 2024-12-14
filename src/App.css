@@ -1,0 +1,123 @@
+.container {
+  text-align: center;
+  margin: 20px;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  background-color: #444;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.controls div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="number"],
+select,
+input[type="range"] {
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button {
+  background-color: #61dafb;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #4fa3f7;
+}
+
+
+.array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.array-bar {
+  width: 20px;
+  margin: 0 2px;
+  transition: height 0.2s ease, background-color 0.2s ease;
+  border-radius: 5px;
+}
+
+
+.array-bar.active {
+  background-color:  red;
+}
+
+.array-bar.swapping {
+  background-color: yellow;
+}
+
+.array-bar.sorted {
+  background-color: green;
+}
+
+.array-bar.default {
+  background-color: blue;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+}
